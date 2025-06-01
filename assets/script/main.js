@@ -12,3 +12,13 @@ $(window).on('resize', function () {
   // ハンバーガーメニューを閉じる
   hamburger.removeClass('hamburger__menu-active');
 });
+
+// カルーセル
+$('.products-service__slick').slick({
+  dots: true,
+  arrows: false,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  infinite: false,
+});
+

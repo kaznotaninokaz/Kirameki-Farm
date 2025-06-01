@@ -141,6 +141,46 @@ html, body {
     margin: 2rem auto;
   }
 }
+
+/*  products-service タイトル */
+.products-service__title{
+  padding-top: 1.625rem;
+  padding-bottom: 1.4375rem;
+}
+@media(min-width:768px){
+  .products-service__title{
+    padding-bottom: 1.9375rem;
+  }
+}
+.products-service__title h3{
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #000;
+  padding-bottom: .25rem;
+}
+@media(min-width:768px){
+  .products-service__title h3{
+    font-size: 1.75rem;
+    padding-bottom: 1.0625rem;
+  }
+}
+
+.progress-bar{
+  width: 100%;
+  height: .1875rem;
+  background-color: #ddd;
+  overflow: hidden;
+}
+.progress-fill{
+  width: 14%;
+  height: 100%;
+  background-color: #168352;
+}
+@media(min-width:768px){
+  .progress-fill{
+    width: 13%;
+  }
+}
 /* ヘッダー
 ------------------------------------------ */
 .header{
@@ -716,4 +756,111 @@ html, body {
   .footer span:nth-child(3){
     font-size: .875rem;
   }
+}
+
+/* price（2ページ目）
+------------------------------------------------------ */
+/* cover
+------------------------------------------------------ */
+.cover-common__container{
+  padding-top: 5.1875rem;
+  padding-right: .8125rem;
+}
+@media(min-width:768px){
+  .cover-common__container{
+    padding: 9.625rem .0625rem 1.25rem;
+    max-width: 75.3125rem;
+  }
+}
+.cover-common__top{
+  position: relative;
+  padding-right: .125rem;
+}
+@media(min-width:768px){
+  .cover-common__top{
+    padding-right: 0;
+  }
+}
+.cover-common__top h2{
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #000;
+  padding-top: .625rem;
+}
+@media(min-width:768px){
+  .cover-common__top h2{
+    position: absolute;
+    bottom: 1%;
+    left: -1%;
+    font-size: 2.25rem;
+    background-color: #fff;
+    border-radius: 0 2.5rem 0 0;
+    padding: 1.625rem 2.3125rem 1.625rem 3.375rem;
+  }
+}
+/* ボトム */
+.cover-common__bottom{
+  display: flex;
+  justify-content: flex-end;
+  font-size: .75rem;
+  color: #000;
+  column-gap: .4375rem;
+  padding-top: 1rem;
+}
+@media(min-width:768px){
+  .cover-common__bottom{
+    padding-top: .6875rem;
+  }
+}
+/* products-service
+---------------------------------------------------------*/
+@media(max-width:767px){
+  .products-service_contaier {
+    max-width: 33.125rem;
+    margin: 0 auto;
+  }
+}
+@media(min-width:768px){
+  .products-service_contaier{
+    max-width: 52.1875rem;
+  }
+}
+/* カルーセル*/
+.slick-slide img {
+    height: 14.875rem;
+    border-radius: 1.5rem;
+    margin: 0 auto;
+}
+@media(min-width:768px){
+  .slick-slide img {
+    height: 31.25rem;
+  }
+}
+/* ドット */
+.slick-dots {
+    bottom: -1%;
+}
+@media(min-width:768px){
+  .slick-dots {
+    bottom: 1%;
+}
+}
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: .875rem;
+    height: .875rem;
+    margin: 0;
+}
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: #168352;
+}
+.slick-dots li button:before {
+    left: -.1875rem;
+    font-size: .625rem;
+    line-height: 0;
+    color: #eee;
+    opacity: 1;
+
 }

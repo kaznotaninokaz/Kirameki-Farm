@@ -131,17 +131,69 @@ html, body {
   max-width: 18.75rem;
   margin: 1.375rem auto;
   padding-top: 1.0625rem;
-  padding-bottom: 1.375rem;
+  padding-bottom: 1.0625rem;
   font-size: 1.125rem;
   font-weight: 700;
   border-radius: 2.0625rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 @media(min-width:768px){
   .button{
     margin: 2rem auto;
   }
 }
+.button-top{
+  position: absolute;
+  bottom: 0.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.button-bottom{
+  background-color: #066655;
+  padding-top: 3.0625rem;
+  margin-top: 1.75rem;
+}
+@media(min-width:768px){
+  .button-bottom{
+    margin-top: 2.125rem;
+  }
+}
+.button-top:hover{
+  bottom: 0;
+}
 
+/* ボタン */
+.contact-button{
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 22.0625rem;
+  width: 100%;
+  font-size: 1.25rem;
+  background-color: transparent;
+  border: .125rem solid #fff;
+  border-radius: 2.5rem;
+  padding: 0;
+}
+@media(min-width:768px){
+  .contact-button{
+    top: 43%;
+    max-width: 22.5rem;
+  }
+}
+.contact-button a{
+  display: block;
+  padding: 1.3125rem 6.875rem;
+}
+.contact-button:hover{
+  background-color: #fff;
+}
+.contact-button a:hover{
+  color: #168352;
+}
 /*  products-service タイトル */
 .products-service__title{
   padding-top: 1.625rem;
@@ -149,7 +201,7 @@ html, body {
 }
 @media(min-width:768px){
   .products-service__title{
-    padding-bottom: 1.9375rem;
+    padding-bottom: 2.0625rem;
   }
 }
 .products-service__title h3{
@@ -161,7 +213,7 @@ html, body {
 @media(min-width:768px){
   .products-service__title h3{
     font-size: 1.75rem;
-    padding-bottom: 1.0625rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -181,6 +233,50 @@ html, body {
     width: 13%;
   }
 }
+/* 表 */
+.table{
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  color: #000;
+  border: 1px solid #ddd;
+}
+@media(min-width:768px){
+  .table{
+    display: flex;
+    flex-direction: row;
+  }
+}
+.table-label{
+  font-weight: 700;
+  background-color: #f5f5f5;
+}
+@media(min-width:768px){
+  .table-label{
+    width: 27%;
+  }
+}
+.table-label,
+.table-value{
+  padding: .25rem 1.1875rem .375rem;
+}
+@media(min-width:768px){
+  .table-label{
+    padding: 1.0625rem 1.125rem 1rem;
+  }
+  .table-value{
+    padding-top: 1rem;
+    padding-left: 1.375rem;
+  }
+}
+.table:nth-child(8) .table-value{
+  letter-spacing: -.0031rem;
+}
+@media(min-width:768px){
+  .table:nth-child(8) .table-value{
+    letter-spacing: 0;
+  }
+}
 /* ヘッダー
 ------------------------------------------ */
 .header{
@@ -189,7 +285,7 @@ html, body {
   left: 0;
   right: 0;
   background: #FFF;
-
+  z-index: 1;
 }
 @media(min-width:768px){
   .header{
@@ -637,6 +733,9 @@ html, body {
 }
 /* news
 ----------------------------------------------------------*/
+.news{
+  position: relative;
+}
 .news__item{
   padding-bottom: 2.0625rem;
 }
@@ -658,13 +757,19 @@ html, body {
 }
 .news__item-content{
   border-bottom: .0625rem solid #ddd;
-  padding-top: .9375rem;
+  padding-top: .875rem;
   padding-bottom: .625rem;
   width: 100%;
   max-width: 31.25rem;
   margin: 0 auto;
 }
+.news__item-content:last-child{
+  padding-bottom: .6875rem;
+}
 @media(min-width:768px){
+  .news__item-content:last-child{
+  padding-bottom: 1.0625rem;
+  }
   .news__item-content{
     padding-top: .9375rem;
     padding-bottom: 1rem;
@@ -862,5 +967,113 @@ html, body {
     line-height: 0;
     color: #eee;
     opacity: 1;
-
+}
+/* 特徴
+------------------------------------ */
+.products-service__features{
+  row-gap: 2.125rem;
+  margin-bottom: 1.5625rem;
+}
+@media(min-width:768px){
+  .products-service__features-item img{
+    height: 9.375rem;
+    border-radius: 1rem;
+  }
+}
+.products-service__features-item p{
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #000;
+}
+@media(min-width:768px){
+  .products-service__features-item:first-child p{
+    padding-bottom: 2.0625rem;
+  }
+}
+/* メーカー希望小売価格
+-------------------------------------- */
+/* タイトル */
+.products-service__title-price{
+  padding-bottom: .5rem;
+}
+@media(min-width:768px){
+  .products-service__title-price{
+    padding-bottom: 1rem;
+  }
+}
+.products-service__price{
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: #000;
+  padding-bottom: 1rem;
+}
+@media(min-width:768px){
+    .products-service__price{
+    padding-bottom: 1.5rem;
+  }
+}
+.products-service__price span:first-child {
+  font-size: 2rem;
+}
+/* スペック
+--------------------------------------  */
+@media(min-width:768px){
+  .products-service_spec{
+    max-width: 46.25rem;
+    margin: 0 auto;
+  }
+}
+.products-service_spec-title{
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000;
+  border-left: 3px solid  #168352;
+  padding-left: .9375rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+@media(min-width:768px){
+  .products-service_spec-title{
+    font-size: 1.5rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+}
+/* アイテム */
+.products-service_spec-item{
+  margin-bottom: 3.9375rem;
+}
+@media(min-width:768px){
+  .products-service_spec-item{
+    margin-bottom: 4.4375rem;
+  }
+}
+/* contact
+------------------------------------------------------ */
+.contact{
+  position: relative;
+  height: 22.5rem;
+}
+@media(min-width:768px){
+  .contact{
+    height: 28.125rem;
+  }
+}
+.contact img{
+  height: 22.5rem;
+}
+@media(min-width:768px){
+  .contact img{
+    height: 28.125rem;
+  }
+}
+/* 半透明にする（黒色）*/
+.overlay{
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.502;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }

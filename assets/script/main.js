@@ -49,9 +49,41 @@ $('.faq__item-content').on('click', function (e) {
         }
     } else {
         if (anyOpen) {
-            $('.faq__container').css('row-gap', '1.375rem');
+            $('.faq__container').css('row-gap', '1.4375rem');
         } else {
-            $('.faq__container').css('row-gap', '1.375rem');
+            $('.faq__container').css('row-gap', '1.4375rem');
         }
     }
+});
+
+$(function () {
+  var $faqContainer = $('.faq__container');
+  var $faqItems = $('.faq__item');
+
+  function updateContainerPadding() {
+    if ($(window).width() < 768) {
+      // スマホ時はクラス除去
+      $faqContainer.removeClass('faq__container--expanded');
+      return;
+    }
+
+    var isAnyOpen = $faqItems.is('.is-open');
+
+    if (isAnyOpen) {
+      $faqContainer.addClass('faq__container--expanded');
+    } else {
+      $faqContainer.removeClass('faq__container--expanded');
+    }
+  }
+
+  // アコーディオンのトグル時に open クラスを付ける想定
+  $faqItems.each(function () {
+    var $item = $(this);
+    $item.find('.faq__item-content-top').on('click', function () {
+      $item.toggleClass('is-open');
+      updateContainerPadding();
+    });
+  });
+
+  $(window).on('resize', updateContainerPadding);
 });

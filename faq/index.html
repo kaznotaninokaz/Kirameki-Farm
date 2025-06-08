@@ -38,9 +38,9 @@
         <header class="header">
             <div class="header__container">
                 <!-- ヘッダーロゴ -->
-                <h1 class="header__logo">
+                <div class="header__logo">
                     <a href="#"><img src="/assets/images/header/logo.svg" alt="Kirameki Farm"></a>
-                </h1>
+                </div>
                 <!-- ハンバーガーボタン-->
                 <button type="button" class="hamburger__button">
                     <i class="bi bi-list"></i>
@@ -51,7 +51,7 @@
                         <ul class="hamburger__nav-list-group">
                             <li><a href="#">トップ</a></li>
                             <li><a href="/price"> 価格・スペック</a></li>
-                            <li><a href="/faq">よくあるご質問</a></li>
+                            <li ><a href="/faq" class="green">よくあるご質問</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -68,7 +68,7 @@
                             <source srcset="/assets/images/faq/mainVisual_faq_pc.jpg" media="(min-width: 768px)">
                             <img src="/assets/images/faq/mainVisual_faq_sp.jpg" alt="">
                         </picture>
-                        <h2>よくあるご質問</h2>
+                        <h1>よくあるご質問</h1>
                     </div>
                     <!-- cover bottom -->
                     <div class="cover-common__bottom">
@@ -366,9 +366,10 @@
         </main>
         <!-- フッター-->
         <div class="footer flex">
-            <span>価格・スペック</span>
-            <span class="footer-bar"></span>
-            <span>よくあるご質問</span>
+            <ul class="footer_nav">
+                <li><a href="/price"> 価格・スペック</a></li>
+                <li><a href="/faq">よくあるご質問</a></li>
+            </ul>
         </div>
         <!-- Slick -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

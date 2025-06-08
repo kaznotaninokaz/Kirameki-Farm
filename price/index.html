@@ -38,9 +38,9 @@
         <header class="header">
             <div class="header__container">
                 <!-- ヘッダーロゴ -->
-                <h1 class="header__logo">
+                <div class="header__logo">
                     <a href="#"><img src="/assets/images/header/logo.svg" alt="Kirameki Farm"></a>
-                </h1>
+                </div>
                 <!-- ハンバーガーボタン-->
                 <button type="button" class="hamburger__button">
                     <i class="bi bi-list"></i>
@@ -50,7 +50,7 @@
                     <nav class="hamburger__nav-list">
                         <ul class="hamburger__nav-list-group">
                             <li><a href="#">トップ</a></li>
-                            <li><a href="/price"> 価格・スペック</a></li>
+                            <li ><a href="/price" class="green"> 価格・スペック</a></li>
                             <li><a href="/faq">よくあるご質問</a></li>
                         </ul>
                     </nav>
@@ -68,7 +68,7 @@
                             <source srcset="/assets/images/products_service/mainVisual/mainVisual_products_service_pc.jpg" media="(min-width: 768px)">
                             <img src="/assets/images/products_service/mainVisual/mainVisual_products_service_sp.jpg" alt="">
                         </picture>
-                        <h2>価格・スペック</h2>
+                        <h1>価格・スペック</h1>
                     </div>
                     <!-- cover bottom -->
                     <div class="cover-common__bottom">
@@ -154,7 +154,7 @@
                     </div>
                     <!-- スペック -->
                     <!-- タイトル-->
-                    <div class="products-service__title">
+                    <div class="products-service__title products-service__title-spec">
                         <h2>スペック</h2>
                         <!-- bar -->
                         <div class="progress-bar">
@@ -218,9 +218,10 @@
         </main>
         <!-- フッター-->
         <div class="footer flex">
-            <span>価格・スペック</span>
-            <span class="footer-bar"></span>
-            <span>よくあるご質問</span>
+            <ul class="footer_nav">
+                <li><a href="/price"> 価格・スペック</a></li>
+                <li><a href="/faq">よくあるご質問</a></li>
+            </ul>
         </div>
         <!-- Slick -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

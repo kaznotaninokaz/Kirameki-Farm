@@ -130,6 +130,7 @@ html, body {
     width: calc(100% / 3) ;
   }
 }
+
 /* ボタン */
 .button{
   background-color: #09947b;
@@ -150,7 +151,7 @@ html, body {
 }
 .button-top{
   position: absolute;
-  bottom: 0.5%;
+  bottom: 1%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -162,11 +163,11 @@ html, body {
 }
 @media(min-width:768px){
   .button-bottom{
-    margin-top: 2.125rem;
+    margin-top: 2.375rem;
   }
 }
 .button-top:hover{
-  bottom: 0;
+  bottom: 0.2%;
 }
 
 /* ボタン */
@@ -228,6 +229,11 @@ html, body {
   background-color: #ddd;
   overflow: hidden;
 }
+@media(min-width:768px){
+  .progress-bar{
+    height: .3125rem;
+  }
+}
 .progress-fill{
   width: 14%;
   height: 100%;
@@ -244,7 +250,12 @@ html, body {
   flex-direction: column;
   font-size: 1rem;
   color: #000;
-  border: .0625rem solid #ddd;
+  border-top: .0625rem solid #ddd;
+  border-right: .0625rem solid #ddd;
+  border-left: .0625rem solid #ddd;
+}
+.table:nth-child(8){
+  border-bottom: .0625rem solid #ddd;
 }
 @media(min-width:768px){
   .table{
@@ -255,6 +266,7 @@ html, body {
 .table-label{
   font-weight: 700;
   background-color: #f5f5f5;
+  border-bottom: .0625rem solid #ddd;
 }
 @media(min-width:768px){
   .table-label{
@@ -268,6 +280,7 @@ html, body {
 @media(min-width:768px){
   .table-label{
     padding: 1.0625rem 1.125rem 1rem;
+    border-bottom: none;
   }
   .table-value{
     padding-top: 1rem;
@@ -400,6 +413,12 @@ html, body {
   }
 }
 
+/* 価格・よくある質問の下層ページ用グリーン*/
+@media(min-width:768px){
+  .hamburger__nav-list-group a.green{
+    color: #168352;
+  }
+}
 /* カバー
 -----------------------------------------------------*/
 /* cover-top */
@@ -744,7 +763,12 @@ html, body {
   position: relative;
 }
 .news__item{
-  padding-bottom: 2.0625rem;
+  padding-bottom: 2.25rem;
+}
+@media(min-width:768px){
+  .news__item{
+    padding-bottom: 2rem;
+  }
 }
 .news__item-container{
   flex-direction: column;
@@ -754,7 +778,7 @@ html, body {
 @media(min-width:768px){
   .news__section-title{
     padding-top: 3.375rem;
-    padding-bottom: 1.75rem;
+    padding-bottom: 1.4375rem;
     line-height: 1.6;
   }
 }
@@ -765,7 +789,7 @@ html, body {
 .news__item-content{
   border-bottom: .0625rem solid #ddd;
   padding-top: .875rem;
-  padding-bottom: .625rem;
+  padding-bottom: .6875rem;
   width: 100%;
   max-width: 31.25rem;
   margin: 0 auto;
@@ -825,6 +849,7 @@ html, body {
 .news__item-content p{
   font-weight: 700;
   padding-top: .75rem;
+  line-height: 1.74;
 }
 @media(min-width:768px){
   .news__item-content p{
@@ -845,28 +870,32 @@ html, body {
     column-gap: 1.3125rem;
   }
 }
-.footer span{
+.footer_nav{
   display: flex;
   align-items: center;
   color: #fff;
   font-size: .8125rem;
 }
-.footer-bar{
-  width: .0625rem;
-  height: 1.25rem;
-  background-color: #fff;
-  margin-top: 1.5625rem;
+@media(min-width:768px){
+  .footer_nav{
+    margin-left: 1.8125rem;
+  }
+}
+.footer_nav li:nth-child(1) a{
+  padding-right: 1.125rem;
+}
+.footer_nav li:nth-child(2) a{
+  border-left: .0625rem solid #fff;
+  padding-left: 1.125rem;
 }
 @media(min-width:768px){
-  .footer span{
+  .footer_nav:nth-child(1) a {
     font-size: .9375rem;
+    padding-right: 1.375rem;
   }
-  .footer-bar{
-  height: 1.5rem;
-  margin-top: 2.3125rem;
-}
-  .footer span:nth-child(3){
+  .footer_nav:nth-child(2) a{
     font-size: .875rem;
+    padding-left: 1.375rem;
   }
 }
 
@@ -893,14 +922,14 @@ html, body {
     padding-right: 0;
   }
 }
-.cover-common__top h2{
+.cover-common__top h1{
   font-size: 1.875rem;
   font-weight: 700;
   color: #000;
   padding-top: .625rem;
 }
 @media(min-width:768px){
-  .cover-common__top h2{
+  .cover-common__top h1{
     position: absolute;
     bottom: 1%;
     left: -1%;
@@ -1016,7 +1045,7 @@ html, body {
 }
 @media(min-width:768px){
     .products-service__price{
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
   }
 }
 .products-service__price span:first-child {
@@ -1028,6 +1057,9 @@ html, body {
   .products-service_spec{
     max-width: 46.25rem;
     margin: 0 auto;
+  }
+  .products-service__title-spec{
+    padding-bottom: 1.5rem;
   }
 }
 .products-service_spec-title{
@@ -1052,7 +1084,7 @@ html, body {
 }
 @media(min-width:768px){
   .products-service_spec-item{
-    margin-bottom: 4.4375rem;
+    margin-bottom: 4.6875rem;
   }
 }
 /* contact

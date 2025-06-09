@@ -841,9 +841,9 @@ html, body {
   }
 }
 
-.news__item-content:nth-child(2) .news-notice,
 .news__item-content:nth-child(3) .news-notice,
-.news__item-content:nth-child(5) .news-notice{
+.news__item-content:nth-child(4) .news-notice,
+.news__item-content:nth-child(6) .news-notice{
   padding: .25rem .9375rem .3125rem;
 }
 .news__item-content p{
@@ -977,6 +977,9 @@ html, body {
     height: 31.25rem;
   }
 }
+.products-service__slick-item:nth-child(3) img {
+    width: 99%;
+}
 /* ドット */
 .slick-dots {
     bottom: -1%;
@@ -1040,7 +1043,7 @@ html, body {
 .products-service__price{
   font-family: "Montserrat";
   font-weight: 700;
-  color: #000;
+  color: #168352;
   padding-bottom: 1rem;
 }
 @media(min-width:768px){
